@@ -30,20 +30,28 @@ body {
 
 main , footer {
     width: 100%;
-    font-size: 1rem;
+    font-size: 1rem ; 
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 main {
+    max-height: 634.3px;
     height: 90%;
 }
 .container {
     width: 90%;
 }
+.container , .footer {
+    max-width: 356.48;
+}
 .footer {
     width: 90%;
     display: flex;
     justify-content: space-between;
+}
+.container  {
+    height: 100%;
 }
 .footer > p {
     margin: 0;
@@ -145,18 +153,22 @@ a {
         border-radius: 1.5rem;
     }
     footer , main {
-        width: 80%;
-    }
-    main {
-        height: 70%;
-    }
-}
-@media only screen and (min-width:550px) {
-    footer , main {
-        width: 60%;
+        max-width: 500px;
+        width: 70%;
     }
     main {
         height: 80%;
     }
+    .container {
+        height: 90%;
+    }
+    
 }
+@media only screen and (min-width:800px) {
+    main  , footer {
+        max-width: 500px;
+    }
+}
+
+
 
