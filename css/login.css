@@ -8,6 +8,7 @@
     --blue : #2F80ED ; 
     --light-blue : #2D9CDB ; 
     --bg-white : #FAFAFB ; 
+    --orange : #F0402C ; 
     --fw-600 : 600 ; 
     --fw-400 : 400 ; 
 }
@@ -26,7 +27,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: auto 0 ;
+    padding: 1rem 0rem;
 
 }
 
@@ -104,9 +105,10 @@ input , button {
     left: 0%;
 }
 input {
-    border: 1px solid #BDBDBD ;
+    outline: 1px solid #BDBDBD ;
     padding: 0.8125rem;
     border-radius: 0.5rem;
+    border: none;
     text-indent: 2rem;
     margin-bottom: 0.90625rem;
     color: var(--dark-gray);
@@ -149,7 +151,30 @@ a {
 .login {
     color: var(--light-blue);
 }
-
+.sr-only {
+    color: var(--light-gray);
+}
+/* hover state section  */
+input:focus  {
+    outline: 1px solid var(--orange);
+}
+button:hover {
+    background-color: var(--orange);
+}
+i:hover {
+    color: var(--orange);
+    outline: 1px solid var(--orange);
+}
+.login:hover {
+    color: var(--orange);
+}
+.footertext:hover {
+    color: var(--orange);
+}
+.sr-only:hover {
+    color: var(--orange);
+}
+/* setting the media queries */
 @media only screen and (min-width:375px) {
     main {
         border: 1px solid var(--border-gray);
@@ -184,6 +209,7 @@ a {
     }
     input {
         background-color: var(--dark-gray);
+        color: var(--light-gray);
     }
 }
 
