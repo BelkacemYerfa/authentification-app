@@ -20,11 +20,33 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
 }
 
 main , footer {
-    padding: auto ;
+    width: 100%;
     font-size: 1rem;
+    display: flex;
+    justify-content: center;
+}
+main {
+    height: 90%;
+}
+.container {
+    width: 90%;
+}
+.footer {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer > p {
+    margin: 0;
 }
 h3 {
     font-size: 1.2rem;
@@ -116,18 +138,25 @@ a {
 .login {
     color: var(--light-blue);
 }
-footer {
-    display: flex;
-    justify-content: space-between;
-}
-footer > p {
-    margin: 0;
-}
+
 @media only screen and (min-width:375px) {
     main {
         border: 1px solid var(--border-gray);
         border-radius: 1.5rem;
-        flex-basis: 100%;
+    }
+    footer , main {
+        width: 80%;
+    }
+    main {
+        height: 70%;
+    }
+}
+@media only screen and (min-width:550px) {
+    footer , main {
+        width: 60%;
+    }
+    main {
+        height: 80%;
     }
 }
 
