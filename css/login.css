@@ -1,6 +1,7 @@
 :root {
     --dark-gray : #333333 ; 
     --gray : #828282 ; 
+    --light-gray : #E0E0E0 ; 
     --bg-gray : #252329 ; 
     --border-gray : #BDBDBD ; 
     --white : #FFFFFF ; 
@@ -24,8 +25,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 0;
+    min-height: 100vh;
+    padding: auto 0 ;
+
 }
 
 main , footer {
@@ -37,7 +39,7 @@ main , footer {
 }
 main {
     max-height: 634.3px;
-    height: 90%;
+    min-height: 600px;
 }
 .container {
     width: 90%;
@@ -49,6 +51,7 @@ main {
     width: 90%;
     display: flex;
     justify-content: space-between;
+    margin-top: 0.765625rem;
 }
 .container  {
     height: 100%;
@@ -85,13 +88,13 @@ input , button {
     align-items: center;
 }
 .footertext {
-    color: var(--border-gray);
+    color: var(--gray);
 }
 .mail , .lock {
     position: absolute ;
     padding: 0.8125rem;
     font-size: 1.2rem;
-    opacity: 0.5;
+    color: var(--gray);
 }
 .mail {
     left: 0%;
@@ -154,7 +157,7 @@ a {
     }
     footer , main {
         max-width: 500px;
-        width: 70%;
+        width: 80%;
     }
     main {
         height: 80%;
@@ -167,6 +170,20 @@ a {
 @media only screen and (min-width:800px) {
     main  , footer {
         max-width: 500px;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--dark-gray);
+    }
+    path:first-child  {
+        fill: var(--light-gray);
+    }
+    h3 , .description {
+        color: var(--light-gray);
+    }
+    input {
+        background-color: var(--dark-gray);
     }
 }
 
