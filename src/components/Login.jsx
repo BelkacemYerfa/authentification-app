@@ -25,9 +25,9 @@ export const Login = ()=>{
             
                 <nav class="nav-section">
                     <span class="material-symbols-outlined mail ">mail</span>
-                    <input type="email" placeholder="Email" />
+                    <input type="email" className="InputType" placeholder="Email" />
                     <span class="material-symbols-outlined lock ">lock</span>
-                    <input type="password" placeholder="Password" />
+                    <input type="password" className="InputType" placeholder="Password" />
                     <button type="submit" className="BtnQ">Start coding now </button>
                 </nav>
                 <p class="options-text gradetext">or continue with these social profile </p>

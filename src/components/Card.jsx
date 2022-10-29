@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-
+import testImages from '../Images/istockphoto-1309328823-170667a.jpg' ; 
 
 export const Card = ()=>{
   let checkCase ; 
@@ -23,7 +23,7 @@ export const Card = ()=>{
         Basic info, like your name and photo
        </p>
      </div>
-   <div className="Card ">
+   <div className="Card CardEditing">
      <div className="editSection">
       <div className="left ">
         <h2 className="Color text-3xl bold">
@@ -59,7 +59,7 @@ export const Card = ()=>{
                Data
              </p>) : checkCase === 0 ? (<p className="InfoData">
               {HidePassword(elem)}
-             </p>) : checkCase === 1 ? (<img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.whatsappimages.in%2Fsad-pics%2F&psig=AOvVaw3JU6En8FObScozOFesz5HJ&ust=1666822076204000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNi9v6Ky_PoCFQAAAAAdAAAAABAT' alt='' height={40} width={40} />) :(<p className="InfoData">
+             </p>) : checkCase === 1 ? (<img src={testImages} alt='' height={100} width={80} />) :(<p className="InfoData">
                Data
              </p>) }
             </div>

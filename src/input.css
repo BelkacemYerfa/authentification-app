@@ -33,7 +33,7 @@ input#file {
  -moz-box-sizing: border-box;
  box-sizing: border-box;
  background: url('./Images/photo_camera_FILL1_wght400_GRAD0_opsz48.svg') center center no-repeat;
- border-radius: 10px;
+ border: none !important;
  background-size: 30px 30px;
 }
 
@@ -108,7 +108,7 @@ h3 {
     font-size: 0.8rem;
     color: var(--gray);
 }
-input , button {
+.InputType ,  .BtnQ{
     width: 100% ;
 }
 .nav-section {
@@ -133,7 +133,7 @@ input , button {
     top: 30%;
     left: 0%;
 }
-input {
+.InputType {
     outline: 1px solid #BDBDBD ;
     padding: 0.8125rem;
     border-radius: 0.5rem;
@@ -142,7 +142,7 @@ input {
     margin-bottom: 0.90625rem;
     color: var(--dark-gray);
 }
-input:placeholder-shown {
+.InputType:placeholder-shown {
     color: var(--gray);
 }
 .BtnQ {
@@ -214,7 +214,7 @@ a {
     path:first-child  {
         fill: var(--light-gray);
     }
-    h1 , h2 , p , .description , span , h3 {
+    h1 , h2 , p , .description  , h3 {
         color: var(--light-gray);
     }
     input , textarea {
@@ -231,16 +231,19 @@ a {
   @apply hover:outline-HoverBackBtnState hover:outline-1 hover:outline hover:text-HoverBackBtnState !important; 
  }
  .Card{
-  @apply h-fit w-[95%] sm:w-[60%] sm:border-[1px] sm:border-gray-600 sm:border-solid sm:rounded-md !important ; 
+  @apply h-fit w-full sm:w-[120%] border-[1px] border-gray-600 border-solid rounded-md transition-all !important ; 
+ }
+ .CardEditing{
+  @apply sm:w-[150%] !important; 
  }
  .CardChange{
-  @apply p-[3.5%] flex flex-col items-start w-[90%] ; 
+  @apply p-[3.5%] border-none flex flex-col items-start w-[90%] ; 
  }
  .TitleHolder{
   @apply flex justify-center items-center flex-col ; 
  }
  .GetInfo{
-  @apply font-normal	 text-3xl !important; 
+  @apply font-normal text-3xl !important; 
  }
  .editSection{
   @apply m-[3.5%] flex items-center justify-between  ; 
@@ -261,7 +264,7 @@ a {
   @apply text-xl font-medium leading-6 tracking-wide ; 
  }
  .BackBtn{
-  @apply flex items-center  font-semibold text-BackBtn relative left-[-38%] sm:left-[-28%] text-xl hover:text-HoverBackBtnState !important; 
+  @apply flex items-center  font-semibold text-BackBtn relative left-[-38%] sm:left-[-53%] text-xl hover:text-HoverBackBtnState !important; 
  }
  .arrow{
   @apply text-[19px] leading-[0px] hover:fill-HoverBackBtnState	!important;  
@@ -273,7 +276,7 @@ a {
   @apply flex items-center gap-4 ; 
  }
  .LoadingImages{
-  @apply absolute left-[40%]; 
+  @apply absolute left-[-40%]; 
  }
  .Label{
   @apply font-semibold first-letter:capitalize; 
