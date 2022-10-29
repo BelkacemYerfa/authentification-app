@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+ padding: 0;
+ margin : 0 ; 
+ box-sizing: border-box;
+ scroll-behavior: smooth;
+}
+:root {
+ --dark-gray : #333333 ; 
+ --gray : #828282 ; 
+ --light-gray : #E0E0E0 ; 
+ --bg-gray : #252329 ; 
+ --border-gray : #BDBDBD ; 
+ --white : #FFFFFF ; 
+ --blue : #2F80ED ; 
+ --light-blue : #2D9CDB ; 
+ --bg-white : #FAFAFB ; 
+ --fw-600 : 600 ; 
+ --fw-400 : 400 ; 
+}
+input#file {
+ display: inline-block;
+ position: relative;
+ left: -19%;
+ width: 5%;
+ padding: 80px 0 0 0;
+ height: 50px;
+ overflow: hidden;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ background: url('./Images/photo_camera_FILL1_wght400_GRAD0_opsz48.svg') center center no-repeat;
+ border-radius: 10px;
+ background-size: 30px 30px;
+}
+
+@media (prefers-color-scheme: dark) {
+ body {
+     background: var(--dark-gray);
+ }
+ path:first-child  {
+     fill: var(--light-gray);
+ }
+ h1 , h2 , p  {
+     color: var(--light-gray);
+ }
+ input , textarea {
+     background-color: var(--dark-gray);
+ }
+}
+
+
+
+
+@layer {
+ .Card{
+  @apply h-fit w-[95%] sm:w-[60%] sm:border-[1px] sm:border-gray-600 sm:border-solid sm:rounded-md !important ; 
+ }
+ .CardChange{
+  @apply p-[3.5%] flex flex-col items-start w-[90%] ; 
+ }
+ .TitleHolder{
+  @apply flex justify-center items-center flex-col ; 
+ }
+ .GetInfo{
+  @apply font-normal	 text-3xl !important; 
+ }
+ .editSection{
+  @apply m-[3.5%] flex items-center justify-between  ; 
+ }
+ .Btn{
+  @apply rounded-xl bg-transparent cursor-pointer border-2 border-gray-600 border-solid text-xl h-10 w-20 py-[.5rem] px-[1.5rem] text-primaryFont hover:border-BackBtn hover:bg-BackBtn dark:text-white dark:border-white !important ; 
+ }
+ .Info{
+  @apply m-[3.5%] flex items-center !important ; 
+ }
+ .leftInfo{
+  @apply basis-[50%] sm:basis-[30%];
+ }
+ .rightInfo{
+  @apply basis-[50%] sm:basis-[30%];
+ }
+ .InfoData{
+  @apply text-xl font-medium leading-6 tracking-wide ; 
+ }
+ .BackBtn{
+  @apply flex items-center  font-semibold text-BackBtn relative left-[-38%] sm:left-[-28%] text-xl hover:text-HoverBackBtnState !important; 
+ }
+ .arrow{
+  @apply text-[19px] leading-[0px] hover:fill-HoverBackBtnState	!important;  
+ }
+ .format{
+  @apply relative flex items-start flex-col gap-2 w-full !important; 
+ }
+ .Image{
+  @apply flex items-center gap-4 ; 
+ }
+ .LoadingImages{
+  @apply absolute left-[40%]; 
+ }
+ .Label{
+  @apply font-semibold first-letter:capitalize; 
+ }
+ .Input{
+  @apply border-[1px] border-solid p-3 w-full border-primaryFont text-lg rounded-xl focus:outline-none !important; 
+ }
+ .textarea{
+  @apply border-2 border-primaryFont w-full border-solid rounded-xl focus:outline-none p-3 text-lg !important; 
+ }
+ .Error{
+  @apply text-red-600 font-semibold; 
+ }
+ .BtnSave{
+  @apply bg-BackBtn text-white px-4 py-2 mt-3 rounded-lg cursor-pointer font-bold !important; 
+ }
+}
