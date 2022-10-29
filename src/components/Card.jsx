@@ -34,7 +34,7 @@ export const Card = ()=>{
         </p>
       </div>
       <div className="right">
-        <Link to='/settings' className='Btn'>Edit</Link>
+        <Link to='/ChangeSettings' className='Btn'>Edit</Link>
       </div>
      </div>
      <hr />
