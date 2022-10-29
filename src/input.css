@@ -49,6 +49,7 @@ input#file {
  }
  input , textarea {
      background-color: var(--dark-gray);
+     color: var(--light-gray);
  }
 }
 
