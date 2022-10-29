@@ -123,6 +123,7 @@ button {
     border-radius: 0.5rem;
     height: 2.375rem ;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
 .options-text {
     text-align: center;
@@ -155,9 +156,6 @@ a {
     color: var(--light-gray);
 }
 /* hover state section  */
-input:focus  {
-    outline: 1px solid var(--orange);
-}
 button:hover {
     background-color: var(--orange);
 }
@@ -168,7 +166,7 @@ i:hover {
 .login:hover {
     color: var(--orange);
 }
-.footertext:hover {
+.footertext:last-child:hover {
     color: var(--orange);
 }
 .sr-only:hover {
