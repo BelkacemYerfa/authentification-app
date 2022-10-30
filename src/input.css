@@ -217,13 +217,14 @@ a {
     h1 , h2 , p , .description  , h3 {
         color: var(--light-gray);
     }
-    input , textarea {
+    input , .InputType , textarea {
         background-color: var(--dark-gray);
         color: var(--light-gray);
     }
    }
 
 @layer {
+ 
  .BtnQ {
   @apply hover:bg-HoverBackBtnState !important; 
  }
